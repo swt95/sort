@@ -15,16 +15,16 @@ void heapify(int arr[], int n, int i)
 	int largest = i;
 	int lson = i * 2 + 1;
 	int rson = i * 2 + 2;
-
-	if(lson < n && arr[largest] < arr[lson])
+	//============大根堆和小根堆只与这一段有关================
+	if(lson < n && arr[largest] > arr[lson])
 	{
 		largest = lson;
 	}
-	if(rson < n && arr[largest] < arr[rson])
+	if(rson < n && arr[largest] > arr[rson])
 	{
 		largest = rson;
 	}
-
+	//==========================================================
 	if(largest != i)
 	{
 		swap(&arr[largest], &arr[i]);
