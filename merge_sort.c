@@ -70,13 +70,14 @@ void merge_sort(int arr[], int n)
 
 int main()
 {
-	int arr[] = {9,5,2,7,12,4,3,1,11}
+	int arr[] = {9,5,2,7,12,4,3,1,11};
 	int n = 9;
 	merge_sort(arr, n);
 	for(int i = 0; i < n; i++)
 	{
 		printf("%d ", arr[i]);
-		printf("\n");
 	}
+
+	printf("\n");
 	return 0;
 }
